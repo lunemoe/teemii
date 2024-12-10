@@ -4,11 +4,12 @@ services:
   teemii-frontend:
     image: dokkaner/teemii-frontend:latest
     #build: ./app
-    ports:
-      - "8080:80"
+    # ports:
+    #   - "8080:80"
     networks:
       - teemii-network
     environment:
+      - SERVICE_FQDN_TEEMII_80 
       - VITE_APP_TITLE=Teemii
       - VITE_APP_PORT=80
 
